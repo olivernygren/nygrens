@@ -6,7 +6,7 @@ import useStyles from './styles';
 import { Page } from '../components';
 import Image from 'next/image';
 
-// bryt ut Hero och skapa även en <Section /> komponent som tex tar i wrapper-värde etc
+// bryt ut Hero och skapa även en <Section /> komponent som tex tar in wrapper-värde etc
 
 export const HomePage = () => {
   const classes = useStyles();
