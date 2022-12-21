@@ -8,8 +8,8 @@ import {
 } from '@mui/material/styles';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 
+import { MuiButtonOverride } from './overrides';
 // import { GreyColorConfig, PrimaryColorConfig } from './colors';
-// import { MuiButtonOverride } from './overrides';
 
 declare module '@mui/material/styles' {
   interface DefaultTheme extends Theme {}
@@ -50,7 +50,7 @@ export let theme = createTheme({
     },
     h2: {
       fontWeight: 700,
-      fontSize: 40,
+      fontSize: 48,
       '@media (max-width:1024px)': {
         fontSize: 32,
       },
@@ -118,6 +118,10 @@ export let theme = createTheme({
       fontSize: 18,
       color: '#303030',
     },
+    button: {
+      letterSpacing: 0.5,
+      whiteSpace: 'nowrap',
+    },
   },
   palette: {
     background: {
@@ -130,10 +134,10 @@ export let theme = createTheme({
     primary: {
       light: '#F28888',
       main: '#F05D5D',
-      dark: '#DC3434',
+      dark: '#C64545',
     },
     secondary: {
-      main: '#FAC130',
+      main: '#1841BC',
     },
     // tertiary: {
     //   main: '#C1F3E1',
@@ -144,9 +148,9 @@ export let theme = createTheme({
     // customPrimary: PrimaryColorConfig,
     // customGrey: GreyColorConfig,
   },
-  // components: {
-  //   MuiButton: MuiButtonOverride,
-  // },
+  components: {
+    MuiButton: MuiButtonOverride,
+  },
 });
 
 theme = responsiveFontSizes(theme);

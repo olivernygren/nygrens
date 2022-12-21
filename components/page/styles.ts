@@ -8,9 +8,9 @@ export default makeStyles((theme: Theme) =>
       display: 'flex',
       flex: 1,
       minHeight: '100vh',
-      maxWidth: '1200px',
+      maxWidth: '1300px',
       margin: '0 auto',
-      padding: '80px 20px 0px 20px',
+      // padding: '80px 20px 0px 20px',
       oveflowX: 'hidden',
     },
   })

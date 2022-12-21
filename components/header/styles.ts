@@ -5,14 +5,14 @@ export default makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: '100vw',
-      height: 80,
+      height: 100,
     },
     wrapper: {
-      maxWidth: 1200,
+      maxWidth: 1300,
       justifyContent: 'space-between',
       alignItems: 'center',
       margin: '0 auto',
-      padding: '0 20px',
+      // padding: '0 20px',
     },
     menuIconContainer: {
       height: 50,
@@ -23,13 +23,24 @@ export default makeStyles((theme: Theme) =>
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
+      transition: `200ms ease-in-out`,
+      '&:hover': {
+        transform: 'scale(1.08)',
+      },
     },
     leftSideSection: {
       width: 'fit-content',
     },
     logo: {
-      marginLeft: 36,
+      marginLeft: 40,
       marginTop: 5,
+    },
+    mainButton: {
+      backgroundColor: '#F1F1F1',
+      color: theme.palette.text.primary,
+      '&:hover': {
+        backgroundColor: '#E9E9E9',
+      },
     },
   })
 );

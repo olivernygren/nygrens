@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeConfig } from '../theme';
-import { Header } from '../components/page/header';
+import { Header } from '../components/header';
 
 export const App = ({ Component, pageProps }: AppProps) => {
   return (

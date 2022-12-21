@@ -26,7 +26,9 @@ export const Header = () => {
             className={classes.logo}
           />
         </Grid>
-        <Button variant="contained">Kontakta oss</Button>
+        <Button variant="contained" className={classes.mainButton}>
+          Kontakta oss
+        </Button>
       </Grid>
     </Grid>
   );

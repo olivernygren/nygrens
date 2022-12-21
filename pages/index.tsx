@@ -6,6 +6,8 @@ import useStyles from './styles';
 import { Page } from '../components';
 import Image from 'next/image';
 
+// bryt ut Hero och skapa även en <Section /> komponent som tex tar i wrapper-värde etc
+
 export const HomePage = () => {
   const classes = useStyles();
   const router = useRouter();
@@ -25,30 +27,36 @@ export const HomePage = () => {
         <Grid
           container
           item
-          className={classes.headingContainer}
+          className={classes.contentContainer}
           direction="column"
         >
-          <Typography variant="h1" className={classes.boldHeading}>
-            Framtiden är nu,
-          </Typography>
-          <Typography variant="h1" style={{ fontWeight: 300 }}>
-            Vi hjälper dig att synas online!
-          </Typography>
+          <Grid item container direction="column">
+            <Typography variant="h1" className={classes.boldHeading}>
+              Framtiden är här,
+            </Typography>
+            <Typography variant="h2" style={{ fontWeight: 300 }}>
+              Vi hjälper dig att synas online och nå din potential!
+            </Typography>
+          </Grid>
           <Typography variant="body1" className={classes.shortText}>
-            Vi hjälper dig att synas online! Vi hjälper dig att synas online! Vi
-            hjälper dig att synas online! Vi hjälper dig att synas online!
+            Nygrens är en webbyrå som fokuserar på att ge mindre företag i hela
+            Sverige ett ansiktslyft och uppfylla sin sanna potential.
           </Typography>
-          <Grid>
+          <Grid className={classes.buttons}>
             <Button variant="contained">Se kundprojekt</Button>
-            <Button>Kontakta oss</Button>
+            <Button>Varför välja oss?</Button>
           </Grid>
         </Grid>
         <Image
+          className={classes.image}
           src="/images/nygrens-hero-illustration.png"
           alt="Me"
-          width="500"
-          height="500"
+          width="550"
+          height="550"
         />
+      </Grid>
+      <Grid className={classes.sectionTwo}>
+        <Typography>Test</Typography>
       </Grid>
     </Page>
   );
